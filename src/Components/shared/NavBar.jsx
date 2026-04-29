@@ -31,12 +31,14 @@ const NavBar = () => {
             <h2>Hello, {user.name}</h2>
             <h2>{user.email}</h2>
           </div>
+         <Link href={'/my-profile'}>
           <Image
             src={user.image || userAvatar}
             alt="user avatar"
             width={60}
             height={60}
           ></Image>
+         </Link>
           <button
             className="btn bg-purple-500 text-white"
             onClick={async () => await authClient.signOut()}
