@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const AnimalSortedList = ({ animals }) => {
   const [sortingType, setSortingType] = useState("");
@@ -37,7 +38,7 @@ const AnimalSortedList = ({ animals }) => {
                 alt={animal.name}
                 width={300}
                 height={300}
-              />
+              ></Image>
             </figure>
             <div className="card-body">
               <h2 className="card-title">{animal.name}</h2>
@@ -45,7 +46,9 @@ const AnimalSortedList = ({ animals }) => {
               <p className="font-semibold">TK. {animal.price}</p>
               <p className="font-semibold">Weight: {animal.weight}KG</p>
               <div className="card-actions justify-end">
+                <Link href={`/animal-details/${animal.id}`}>
                 <button className="btn btn-primary">See Details</button>
+                </Link>
               </div>
             </div>
           </div>
