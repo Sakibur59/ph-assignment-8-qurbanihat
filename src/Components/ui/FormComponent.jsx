@@ -22,7 +22,7 @@ const FormComponent = () => {
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Phone Number</legend>
           <input
-            type="text"
+            type="tel"
             className="input"
             placeholder="Enter your Phone Number"
             required
