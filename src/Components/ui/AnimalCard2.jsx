@@ -2,13 +2,11 @@ import { getAnimal } from "@/lib/data";
 import Image from "next/image";
 import React from "react";
 
-const AnimalCard = async () => {
+const AnimalCard2 = async () => {
   const animals = await getAnimal();
-  const listedAnimals = animals.slice(0, 4);
-  console.log(animals);
   return (
     <div className="w-300 mx-auto grid grid-cols-3 gap-3">
-      {listedAnimals.map((animal) => {
+      {animals.map((animal) => {
         return (
           <div key={animal.id} className="card bg-base-100 pt-4 w-96 shadow-sm">
             <figure>
@@ -21,7 +19,7 @@ const AnimalCard = async () => {
                 {animal.description}
               </p>
               <p className="font-semibold">TK. {animal.price}</p>
-              
+             
             </div>
           </div>
         );
@@ -30,4 +28,4 @@ const AnimalCard = async () => {
   );
 };
 
-export default AnimalCard;
+export default AnimalCard2;
