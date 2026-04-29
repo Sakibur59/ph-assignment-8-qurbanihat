@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 🐄 QurbaniHat – Livestock Booking Platform
 
-First, run the development server:
 
+
+
+
+## 📖 Overview
+
+**QurbaniHat** is a modern full-stack web application that digitalizes the traditional livestock marketplace of Bangladesh. Every year, millions of families struggle to find healthy, verified animals for Qurbani from crowded and unreliable local markets. QurbaniHat solves this by bringing the entire experience online — browse, filter, and book your Qurbani animal from the comfort of your home.
+
+---
+
+## ✨ Features
+
+- 🔐 **Authentication** — Email/password signup & Google OAuth via Better Auth
+- 🐄 **Animal Listings** — Browse cows, goats, and sheep with images, weight, breed & location
+- 🔃 **Sort by Price** — Low to high / High to low filtering
+- 👤 **User Profile** — Update name and profile photo
+- 🛡️ **Protected Routes** — Proxy-based route protection
+- 📱 **Responsive Design** — Works on all devices
+- 🎨 **DaisyUI Components** — Clean and modern UI
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|-----------|
+| Framework | Next.js 15 (App Router) |
+| Styling | Tailwind CSS + DaisyUI |
+| Authentication | Better Auth |
+| Database | MongoDB Atlas |
+| Language | JavaScript (ES6+) |
+| Animations | Animate.css |
+| Toast | React Toastify |
+| Forms | React Hook Form |
+
+---
+
+[🌐 Live Demo](#) 
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- MongoDB Atlas account
+- Google OAuth credentials 
+
+### Installation
+
+**1. Clone the repository**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Sakibur59/ph-assignment-8-qurbanihat.git
+cd qurbanihat
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**2. Install dependencies**
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**3. Run the development server**
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🐄 Animal Categories
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Category | Animals | Price Range |
+|----------|---------|-------------|
+| 🐄 Large Animal | Cow (Deshi, Sahiwal, Friesian) | ৳1,20,000 – ৳2,20,000 |
+| 🐐 Medium Animal | Goat (Black Bengal, Jamunapari) | ৳25,000 – ৳40,000 |
+| 🐑 Small Animal | Sheep (Garole) | ৳20,000+ |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Md Sakibur Rahman**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/Sakibur59)
+
+---
+
+<div align="center">
+
+Made with ❤️ for Bangladesh 🇧🇩
+
+**QurbaniHat** — ঘরে বসে কুরবানি করুন, নিশ্চিন্তে।
+
+</div>
