@@ -1,11 +1,11 @@
 'use client'
 import React from 'react';
-import { toast } from 'react-toastify';
+
 
 
 const FormComponent = () => {
       const handleBooking = ()=>{
-    toast.success("Booking Successful")
+    alert("Booking Successful")
   }
     return (
         <div>
