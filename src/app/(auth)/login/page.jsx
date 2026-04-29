@@ -3,7 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const LoginPage = () => {
@@ -29,6 +29,15 @@ const LoginPage = () => {
     if(res){
       toast.success("SignIn Successful");
     }
+  };
+  const HandleGoogleSignIn = async () => {
+    const {data,error} = await authClient.signIn.social({
+      provider: "google",
+    });
+    if(error){
+      toast.error(error.message);
+    }
+    
   };
   return (
     <div className="w-300 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
@@ -71,6 +80,13 @@ const LoginPage = () => {
           </fieldset>
           <button className="btn bg-slate-800 text-white w-full">Login</button>
         </form>
+       <button
+          className="btn border-blue-500 text-blue-500 w-full mt-4"
+          onClick={HandleGoogleSignIn}
+        >
+          <FaGoogle></FaGoogle>
+          Login With Google
+        </button>
         <p className="mt-4 ">
           Don't Have an account?
           <Link href={"/register"} className="text-red-500">

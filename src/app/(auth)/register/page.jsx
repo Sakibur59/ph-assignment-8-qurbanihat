@@ -1,9 +1,9 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import Link from "next/link";
+
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash} from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const RegisterPage = () => {
@@ -32,6 +32,7 @@ const RegisterPage = () => {
       toast.success("SignUp Successful");
     }
   };
+  
 
   return (
     <div className="w-300 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
@@ -92,7 +93,7 @@ const RegisterPage = () => {
               className="input"
               placeholder="Enter your Password"
             />
-             <span className="absolute right-10 top-4 text-sm cursor-pointer" onClick={()=>setIsShowPassword(!isShowPassword)}>
+             <span className="absolute right-4 top-4 text-sm cursor-pointer" onClick={()=>setIsShowPassword(!isShowPassword)}>
               {isShowPassword? <FaEye></FaEye>:<FaEyeSlash></FaEyeSlash>}
             </span>
             {errors.password && (
@@ -103,6 +104,7 @@ const RegisterPage = () => {
             Register
           </button>
         </form>
+       
       </div>
     </div>
   );
