@@ -1,8 +1,15 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+<<<<<<< HEAD
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
+=======
+import NavBar from "@/Components/shared/NavBar";
+import Banner from "@/Components/Homepage/banner";
+import AnimalCard from "@/Components/ui/AnimalCard";
+import FooterPage from "@/Components/Homepage/FooterPage";
+>>>>>>> f020e672f800807dbd666dd195d2216ab1a026bf
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +33,7 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+<<<<<<< HEAD
       <body className="min-h-full flex flex-col">{children}
         <ToastContainer 
           position="top-right"
@@ -39,6 +47,10 @@ export default function RootLayout({ children }) {
           pauseOnHover
           theme="light"
         />
+=======
+      <body className="min-h-full flex flex-col">
+        {children}
+>>>>>>> f020e672f800807dbd666dd195d2216ab1a026bf
       </body>
     </html>
   );

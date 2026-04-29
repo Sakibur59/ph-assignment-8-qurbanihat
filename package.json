@@ -11,8 +11,12 @@
   "dependencies": {
     "next": "16.2.4",
     "react": "19.2.4",
+<<<<<<< HEAD
     "react-dom": "19.2.4",
     "react-toastify": "^11.1.0"
+=======
+    "react-dom": "19.2.4"
+>>>>>>> f020e672f800807dbd666dd195d2216ab1a026bf
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

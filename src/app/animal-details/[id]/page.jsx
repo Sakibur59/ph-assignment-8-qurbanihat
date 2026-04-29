@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import FormComponent from "@/Components/ui/FormComponent";
+=======
+>>>>>>> f020e672f800807dbd666dd195d2216ab1a026bf
 import { getAnimalById } from "@/lib/data";
 import Image from "next/image";
 import React from "react";
 
 
+<<<<<<< HEAD
 const animalDetailsPage = async ({ params }) => {
   const { id } = await params;
   const animal = await getAnimalById(id);
@@ -12,6 +16,12 @@ const animalDetailsPage = async ({ params }) => {
 //     alert("Booking Successful")
 //   }
 
+=======
+
+const animalDetailsPage = async ({ params }) => {
+  const { id } = await params;
+  const animal = await getAnimalById(id);
+>>>>>>> f020e672f800807dbd666dd195d2216ab1a026bf
   return (
     <div className="max-w-300 mx-auto my-10 rounded-xl ">
       <div className="card card-side bg-base-100 shadow-lg p-30">
@@ -24,9 +34,13 @@ const animalDetailsPage = async ({ params }) => {
           ></Image>
         </figure>
         <div className="card-body">
+<<<<<<< HEAD
           <h2 className="card-title text-4xl font-bold text-[#131313]">
             {animal.name}
           </h2>
+=======
+          <h2 className="card-title text-4xl font-bold text-[#131313]">{animal.name}</h2>
+>>>>>>> f020e672f800807dbd666dd195d2216ab1a026bf
           <p className="text-xl ">{animal.description}</p>
           <p className="text-xl  text-[#244D3F]">Type: {animal.type}</p>
           <p className="text-xl  text-[#244D3F]">Price: {animal.price} TK</p>
@@ -35,6 +49,7 @@ const animalDetailsPage = async ({ params }) => {
           <p className="text-xl  text-[#244D3F]">Category: {animal.category}</p>
         </div>
       </div>
+<<<<<<< HEAD
       <div className="mt-10">
         <h2 className="font-bold text-3xl mb-6 ">Booking Form</h2>
         {/* <form onSubmit={handleBooking} className="space-y-4 ">
@@ -75,6 +90,11 @@ const animalDetailsPage = async ({ params }) => {
         <FormComponent></FormComponent>
       </div>
     </div>
+=======
+      
+    </div>
+    
+>>>>>>> f020e672f800807dbd666dd195d2216ab1a026bf
   );
 };
 
