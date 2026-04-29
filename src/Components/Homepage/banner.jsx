@@ -1,6 +1,7 @@
 import React from "react";
 import bannerImg from '@/assets/cowHat.jpg'
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -10,7 +11,7 @@ const Banner = () => {
         <div className="space-y-4">
           <h1 className="text-4xl font-bold w-131.5">QurbaniHat – সহজে কিনুন আপনার কোরবানির পশু</h1>
           <p className="font-semibold text-xl w-100">Browse verified cows, goats & sheep from trusted sellers. Compare price, weight & location — book your Qurbani animal from home.</p>
-          <button className="btn btn-success font-bold">Browse</button>
+          <Link href={'/allAnimal'}><button className="btn btn-success font-bold">Browse</button></Link>
         </div>
       </div>
     </div>

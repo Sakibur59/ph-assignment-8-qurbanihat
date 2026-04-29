@@ -22,6 +22,9 @@ const NavBar = () => {
         <li>
           <NavLink href={"/allAnimal"}>All Animal</NavLink>
         </li>
+        <li>
+          <NavLink href={"/about"}>About</NavLink>
+        </li>
       </ul>
       {isPending ? (
         <span className="loading loading-spinner loading-xl"></span>

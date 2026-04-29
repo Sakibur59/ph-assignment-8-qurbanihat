@@ -3,6 +3,14 @@ import { getAnimalById } from "@/lib/data";
 import Image from "next/image";
 import React from "react";
 
+export const generateMetadata=async({ params }) => {
+  const {id} = await params;
+  const animal = await getAnimalById(id);
+  return {
+    title: animal.name,
+    description: animal.description,
+  }
+}
 
 const animalDetailsPage = async ({ params }) => {
   const { id } = await params;
