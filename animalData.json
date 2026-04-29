@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Deshi Shahi Cow",
+    "type": "Cow",
+    "breed": "Local Deshi",
+    "price": 120000,
+    "weight": 280,
+    "age": 3,
+    "location": "Bogura",
+    "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
+    "image": "https://images.unsplash.com/photo-1608978019343-0f8b3d9c3f3f",
+    "category": "Large Animal"
+  },
+  {
+    "id": 2,
+    "name": "White Giant",
+    "type": "Cow",
+    "breed": "Sahiwal",
+    "price": 180000,
+    "weight": 420,
+    "age": 4,
+    "location": "Dhaka",
+    "description": "Big size white cow, ভালোভাবে লালন পালন করা হয়েছে।",
+    "image": "https://images.unsplash.com/photo-1596733430284-f7437764b1a9",
+    "category": "Large Animal"
+  },
+  {
+    "id": 3,
+    "name": "Black Beauty",
+    "type": "Cow",
+    "breed": "Friesian Cross",
+    "price": 220000,
+    "weight": 500,
+    "age": 5,
+    "location": "Savar",
+    "description": "Very large কালো গরু, group Qurbani এর জন্য suitable.",
+    "image": "https://images.unsplash.com/photo-1563281577-a7be47e20db9",
+    "category": "Large Animal"
+  },
+  {
+    "id": 4,
+    "name": "Deshi Goat",
+    "type": "Goat",
+    "breed": "Black Bengal",
+    "price": 25000,
+    "weight": 28,
+    "age": 1.5,
+    "location": "Rajshahi",
+    "description": "Popular Black Bengal goat, ছোট পরিবারের জন্য perfect.",
+    "image": "https://images.unsplash.com/photo-1598514982841-4b7c1b3c6e6d",
+    "category": "Medium Animal"
+  },
+  {
+    "id": 5,
+    "name": "Brown Goat",
+    "type": "Goat",
+    "breed": "Jamunapari",
+    "price": 40000,
+    "weight": 35,
+    "age": 2,
+    "location": "Chittagong",
+    "description": "লম্বা ও সুস্থ Jamunapari ছাগল, ভালো ওজন।",
+    "image": "https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8",
+    "category": "Medium Animal"
+  },
+  {
+    "id": 6,
+    "name": "Sheep King",
+    "type": "Sheep",
+    "breed": "Garole",
+    "price": 20000,
+    "weight": 25,
+    "age": 1,
+    "location": "Khulna",
+    "description": "Healthy ভেড়া, alternative Qurbani animal হিসেবে ভালো।",
+    "image": "https://images.unsplash.com/photo-1500595046743-cd271d694d30",
+    "category": "Small Animal"
+  }
+]
