@@ -1,5 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
+import { redirect } from "next/navigation";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -24,11 +25,12 @@ const MyProfilePage = () => {
     if (res) {
       toast.success("Updated Successfully");
       reset();
+      redirect('/')
     }
   };
   return (
-    <div className="w-300 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
-      <div className="px-20 py-20 rounded-xl bg-white">
+    <div className="w-100 lg:w-300 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
+      <div className="p-10 lg:px-20 py-20 rounded-xl bg-white">
         <h2 className="font-bold text-3xl text-center mb-6 ">
           Update Your Profile
         </h2>

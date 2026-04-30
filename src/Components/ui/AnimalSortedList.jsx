@@ -29,7 +29,7 @@ const AnimalSortedList = ({ animals }) => {
         </button>
       </div>
 
-      <div className="w-300 mx-auto grid grid-cols-3 gap-3">
+      <div className="w-300 mx-auto grid grid-cols-1 mb-7 p-3 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {sortedAnimals.map((animal) => (
           <div key={animal.id} className="card bg-base-100 pt-4 w-96 shadow-sm">
             <figure>

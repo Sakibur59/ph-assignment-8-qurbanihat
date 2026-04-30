@@ -27,7 +27,7 @@ const LoginPage = () => {
       toast.error(error.message);
     }
     if(res){
-      toast.success("SignIn Successful");
+      toast.success("Login Successful");
     }
   };
   const HandleGoogleSignIn = async () => {
@@ -40,8 +40,8 @@ const LoginPage = () => {
     
   };
   return (
-    <div className="w-300 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
-      <div className="px-20 py-20 rounded-xl bg-white">
+    <div className="w-100 lg:w-300 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
+      <div className="p-10 lg:px-20 py-20 rounded-xl bg-white">
         <h2 className="font-bold text-3xl text-center mb-6 ">
           Login Your Account
         </h2>

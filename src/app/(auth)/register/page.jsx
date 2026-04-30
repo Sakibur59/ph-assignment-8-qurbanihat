@@ -31,15 +31,15 @@ const RegisterPage = () => {
       return;
     }
     if(res){
-      toast.success("SignUp Successful");
+      toast.success("Account Registered Successful");
       router.push('/');
     }
   };
   
 
   return (
-    <div className="w-300 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
-      <div className="px-20 py-20 rounded-xl bg-white">
+    <div className="w-100 lg:w-300 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
+      <div className="p-10 lg:px-20 py-20 rounded-xl bg-white">
         <h2 className="font-bold text-3xl text-center mb-6 ">
           Register Your Account
         </h2>

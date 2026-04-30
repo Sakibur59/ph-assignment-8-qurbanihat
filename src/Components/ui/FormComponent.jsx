@@ -9,7 +9,7 @@ const FormComponent = () => {
     e.target.reset()
   };
   return (
-    <div>
+    <div >
       <form onSubmit={handleBooking} className="space-y-4 ">
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Name</legend>

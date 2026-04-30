@@ -5,7 +5,7 @@ import TwitterImage from '../../assets/twitter.png'
 import Image from 'next/image';
 const FooterPage = () => {
     return (
-        <div className='bg-[#244D3F] mt-10 pt-10'>
+        <div className='bg-[#244D3F] p-3 lg:mt-10 pt-10'>
             <div className='text-center space-y-4 max-w-290 mx-auto'>
                 <h1 className='text-white font-bold text-5xl'>QurbaniHat – Livestock Booking Platform</h1>
                 <p className='text-white'>QurbaniHat is a streamlined digital marketplace that connects buyers with trusted farmers for seamless livestock booking. It offers a transparent, stress-free way to browse, compare, and secure sacrificial animals for Qurbani with real-time availability and secure payments.</p>

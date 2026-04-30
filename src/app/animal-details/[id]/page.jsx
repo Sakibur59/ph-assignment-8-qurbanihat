@@ -18,18 +18,19 @@ const animalDetailsPage = async ({ params }) => {
 
 
   return (
-    <div className="max-w-300 mx-auto my-10 rounded-xl ">
-      <div className="card card-side bg-base-100 shadow-lg p-30">
+    <div className="lg:max-w-300 mx-auto my-10 rounded-xl ">
+      <div className="flex-col md:card card-side bg-base-100 shadow-lg p-30 flex-row">
         <figure className="w-full">
           <Image
             src={animal.image}
             alt={animal.name}
             width={300}
             height={300}
+            className=""
           ></Image>
         </figure>
-        <div className="card-body">
-          <h2 className="card-title text-4xl font-bold text-[#131313] animate__animated animate__bounce">
+        <div className="md:card-body">
+          <h2 className="card-title sm:text-2xl md:text-4xl font-bold text-[#131313] animate__animated animate__bounce">
             {animal.name}
           </h2>
           <p className="text-xl animate__animated animate__bounce ">{animal.description}</p>
