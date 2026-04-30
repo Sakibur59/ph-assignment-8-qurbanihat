@@ -1,12 +1,11 @@
+
+import animalsData from "../../public/animalData.json";
+
 export async function getAnimal() {
-  const res = await fetch("http://localhost:3000/animalData.json");
-  const data = await res.json();
-  return data;
+  return animalsData;
 }
 
-export async function getAnimalById(id){
-  const res = await fetch("http://localhost:3000/animalData.json");
-  const data = await res.json();
-  const AnimalById = data.find(animal=>animal.id === parseInt(id));
-  return AnimalById;
+export async function getAnimalById(id) {
+  const animal = animalsData.find(animal => animal.id === parseInt(id));
+  return animal;
 }
