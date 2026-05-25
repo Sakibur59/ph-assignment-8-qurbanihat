@@ -7,93 +7,134 @@ import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const LoginPage = () => {
-    const [isShowPassword,setIsShowPassword] = useState(false);
-  
+  const [isShowPassword, setIsShowPassword] = useState(false);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const handleLoginFunc = async (data) => {
     console.log(data);
     const { data: res, error } = await authClient.signIn.email({
-      email: data.email, // required
-      password: data.password, // required
+      email: data.email,
+      password: data.password,
       rememberMe: true,
       callbackURL: "/",
     });
-    console.log(res, error);
-    if(error){
+
+    if (error) {
       toast.error(error.message);
     }
-    if(res){
-      toast.success("Login Successful");
+    if (res) {
+      toast.success("🎉 Login Successful");
     }
   };
+
   const HandleGoogleSignIn = async () => {
-    const {data,error} = await authClient.signIn.social({
+    const { data, error } = await authClient.signIn.social({
       provider: "google",
+      callbackURL: "/", 
     });
-    if(error){
+
+    if (error) {
       toast.error(error.message);
     }
-    
   };
+
   return (
-    <div className="w-100 lg:w-300 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
-      <div className="p-10 lg:px-20 py-20 rounded-xl bg-white">
-        <h2 className="font-bold text-3xl text-center mb-6 ">
-          Login Your Account
-        </h2>
-        <form
-          onSubmit={handleSubmit(handleLoginFunc)}
-          className="space-y-4 border-t border-t-slate-200"
-        >
-          <fieldset className="fieldset">
-            <legend className="fieldset-legend">Email Address</legend>
+    <div className="min-h-[85vh] flex justify-center items-center bg-base-200/60 px-4 py-8">
+      <div className="w-full max-w-md bg-base-100 shadow-xl border border-base-200 rounded-3xl p-6 sm:p-10 transition-all">
+        
+
+        <div className="text-center mb-8">
+          <h2 className="font-black text-3xl text-base-content">
+            Login Your Account
+          </h2>
+          <p className="text-sm text-base-content/60 mt-2">
+            আপনার অ্যাকাউন্টে লগইন করে হাটের সুবিধা নিন
+          </p>
+        </div>
+
+    
+        <form onSubmit={handleSubmit(handleLoginFunc)} className="space-y-5 pt-4 border-t border-base-200">
+          
+  
+          <fieldset className="fieldset w-full">
+            <legend className="fieldset-legend font-semibold text-base-content/80">Email Address</legend>
             <input
               {...register("email", { required: "Email field is required" })}
               type="email"
-              className="input"
+              className={`input input-bordered w-full bg-base-100 focus:input-success transition-all ${
+                errors.email ? "input-error" : ""
+              }`}
               placeholder="Type your Email"
             />
             {errors.email && (
-              <p className="text-red-500">{errors.email.message}</p>
+              <p className="text-xs text-error mt-1 font-medium">{errors.email.message}</p>
             )}
           </fieldset>
-          <fieldset className="fieldset relative">
-            <legend className="fieldset-legend">Password</legend>
-            <input
-              {...register("password", {
-                required: "Password field is required",
-              })}
-              type={isShowPassword?"text":"password"}
-              className="input"
-              placeholder="Enter your Password"
-            />
-            <span className="absolute right-3 top-4 text-sm cursor-pointer" onClick={()=>setIsShowPassword(!isShowPassword)}>
-              {isShowPassword? <FaEye></FaEye>:<FaEyeSlash></FaEyeSlash>}
-            </span>
+
+        
+          <fieldset className="fieldset w-full relative">
+            <legend className="fieldset-legend font-semibold text-base-content/80">Password</legend>
+            
+            <div className="relative w-full">
+              <input
+                {...register("password", {
+                  required: "Password field is required",
+                })}
+                type={isShowPassword ? "text" : "password"}
+                className={`input input-bordered w-full bg-base-100 focus:input-success pr-12 transition-all ${
+                  errors.password ? "input-error" : ""
+                }`}
+                placeholder="Enter your Password"
+              />
+              
+          
+              <button
+                type="button"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-base-content/50 hover:text-base-content transition-colors"
+                onClick={() => setIsShowPassword(!isShowPassword)}
+              >
+                {isShowPassword ? <FaEye size={18} /> : <FaEyeSlash size={18} />}
+              </button>
+            </div>
+
             {errors.password && (
-              <p className="text-red-500">{errors.password.message}</p>
+              <p className="text-xs text-error mt-1 font-medium">{errors.password.message}</p>
             )}
           </fieldset>
-          <button className="btn bg-slate-800 text-white w-full">Login</button>
+
+         
+          <div className="pt-2">
+            <button className="btn btn-success text-white font-bold btn-block shadow-md shadow-success/20 hover:shadow-success/40 transition-all duration-300">
+              Login
+            </button>
+          </div>
         </form>
-       <button
-          className="btn border-blue-500 text-blue-500 w-full mt-4"
+
+  
+        <div className="divider text-xs text-base-content/40 my-6">OR</div>
+
+        
+        <button
+          className="btn btn-outline border-base-300 hover:bg-base-200 hover:text-base-content w-full font-bold gap-3 rounded-xl transition-all"
           onClick={HandleGoogleSignIn}
         >
-          <FaGoogle></FaGoogle>
+          <FaGoogle className="text-red-500 text-lg" />
           Login With Google
         </button>
-        <p className="mt-4 ">
-          Don't Have an account?
-          <Link href={"/register"} className="text-red-500">
-            {" "}
+
+        
+        <p className="mt-8 text-center text-sm font-medium text-base-content/70">
+          Don't have an account?{" "}
+          <Link href={"/register"} className="text-error hover:underline font-bold ml-1">
             Register
           </Link>
         </p>
+        
       </div>
     </div>
   );
